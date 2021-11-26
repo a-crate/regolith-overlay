@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name>regolith-overlay</name>
+    <description lang="en">A gentoo overlay for the regolith desktop</description>
+    <homepage>https://github.com/a-crate/regolith-overlay</homepage>
+    <owner type="person">
+      <name>Amelia Crate</name>
+      <email>acrate@waldn.net</email>
+    </owner>
+    <source type="git">https://github.com/a-crate/regolith-overlay.git</source>
+  </repo>
+</repositories>
