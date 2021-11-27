@@ -7,7 +7,7 @@ inherit autotools
 
 DESCRIPTION="A fork of i3blocks that can read Xresources."
 HOMEPAGE="https://github.com/regolith-linux/i3xrocks"
-SRC_URI="https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+sourcefiles/i3xrocks/1.3.5-1/i3xrocks_1.3.5.orig.tar.gz -> {P}.tar.gz"
+SRC_URI="https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+sourcefiles/i3xrocks/1.3.5-1/i3xrocks_1.3.5.orig.tar.gz -> ${P}.tar.gz"
 
 SLOT="0"
 KEYWORDS="~amd64"
