@@ -3,20 +3,14 @@
 
 EAPI=7
 
-inherit autotools
+inherit autotools git-r3
 
 DESCRIPTION="A fork of i3blocks that can read Xresources."
 HOMEPAGE="https://github.com/regolith-linux/i3xrocks"
-SRC_URI="https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+sourcefiles/i3xrocks/1.3.5-1/i3xrocks_1.3.5.orig.tar.gz -> {P}.tar.gz"
+EGIT_REPO_URI="https://github.com/regolith-linux/i3xrocks.git"
 
 SLOT="0"
-KEYWORDS="~amd64"
 LICENSE="GPL-3"
-
-src_unpack() {
-	default
-	mv "${WORKDIR}/i3xrocks" "${WORKDIR}/${P}"
-}
 
 src_prepare() {
 	default
