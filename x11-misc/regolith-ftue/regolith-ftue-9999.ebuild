@@ -1,5 +1,6 @@
 # Copyright 2021 Amelia Crate <acrate@waldn.net>
 # Distributed under the terms of the BSD License
+# this ebuild can't fulfill all dependencies and will not be support until regolith 2.0 is released
 
 EAPI=7
 
