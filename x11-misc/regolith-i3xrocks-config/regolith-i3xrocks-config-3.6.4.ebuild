@@ -8,11 +8,19 @@ inherit python-single-r1
 
 DESCRIPTION="Regolith customization of i3xrocks."
 HOMEPAGE="https://github.com/regolith-linux/regolith-i3xrocks-config"
-SRC_URI="https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+sourcefiles/regolith-i3xrocks-config/3.6.4-1/regolith-i3xrocks-config_3.6.4.orig.tar.gz -> ${P}.tar.gz"
-
 SLOT="0"
-KEYWORDS="~amd64"
 LICENSE="GPL-3"
+if [[ ${PV} == *9999 ]]; then
+	inherit git-r3
+	EGIT_REPO_URI="https://github.com/regolith-linux/${PN}.git"
+else
+	SRC_URI="https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+sourcefiles/${PN}/${PV}-1/${PN}_${PV}.orig.tar.gz -> ${P}.tar.gz"
+	KEYWORDS="~amd64"
+	src_unpack() {
+		default
+		mv "${WORKDIR}/${PN}" "${WORKDIR}/${P}"
+	}
+fi
 IUSE="+time +disk-capacity +remontoire +net-traffic +memory +cpu-usage +focused-window-name +battery +keyboard-layout +key-indicator +media-player +networkmanager +openvpn +temp +volume +microphone +weather +wifi +bluetooth +next-workspace +rofication +app-launcher"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
@@ -97,11 +105,6 @@ RDEPEND="
 		x11-misc/rofi
 	)
 "
-
-src_unpack() {
-	default
-	mv "${WORKDIR}/regolith-i3xrocks-config" "${WORKDIR}/${P}"
-}
 
 src_install() {
 	insinto /usr/share/i3xrocks

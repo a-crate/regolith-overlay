@@ -4,26 +4,28 @@
 EAPI=7
 
 PYTHON_COMPAT=( python3_{9..10} )
-inherit python-single-r1 git-r3
+inherit python-single-r1
 
 DESCRIPTION="Regolith customization of i3xrocks."
 HOMEPAGE="https://github.com/regolith-linux/regolith-i3xrocks-config"
-EGIT_REPO_URI="https://github.com/regolith-linux/regolith-i3xrocks-config.git"
-
 SLOT="0"
 LICENSE="GPL-3"
+if [[ ${PV} == *9999 ]]; then
+	inherit git-r3
+	EGIT_REPO_URI="https://github.com/regolith-linux/${PN}.git"
+else
+	SRC_URI="https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+sourcefiles/${PN}/${PV}-1/${PN}_${PV}.orig.tar.gz -> ${P}.tar.gz"
+	KEYWORDS="~amd64"
+	src_unpack() {
+		default
+		mv "${WORKDIR}/${PN}" "${WORKDIR}/${P}"
+	}
+fi
 IUSE="+time +disk-capacity +remontoire +net-traffic +memory +cpu-usage +focused-window-name +battery +keyboard-layout +key-indicator +media-player +networkmanager +openvpn +temp +volume +microphone +weather +wifi +bluetooth +next-workspace +rofication +app-launcher"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 DEPEND="$(python_gen_impl_dep)"
-
-RDEPEND="
-	app-shells/bash
-	dev-lang/perl
-	=dev-lang/python-3*
-	x11-misc/i3xrocks
-"
 
 RDEPEND="
 	>=app-shells/bash-3.0
