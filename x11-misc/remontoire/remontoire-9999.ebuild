@@ -3,15 +3,23 @@
 
 EAPI=7
 
-inherit git-r3 vala meson
+inherit vala meson
 
 DESCRIPTION="A keybinding viewer for i3 and other programs. "
 HOMEPAGE="https://github.com/regolith-linux/remontoire"
-
-EGIT_REPO_URI="https://github.com/regolith-linux/remontoire.git"
 LICENSE="GPL-3"
 SLOT="0"
-
+if [[ ${PV} == *9999 ]]; then
+	inherit git-r3
+	EGIT_REPO_URI="https://github.com/regolith-linux/${PN}.git"
+else
+	SRC_URI="https://launchpad.net/~regolith-linux/+archive/ubuntu/release/+sourcefiles/${PN}/${PV}-1/${PN}_${PV}.orig.tar.gz -> ${P}.tar.gz"
+	KEYWORDS="~amd64"
+	src_unpack() {
+		default
+		mv "${WORKDIR}/${PN}" "${WORKDIR}/${P}"
+	}
+fi
 BDEPEND="${BDEPEND}
 	sys-devel/gettext
 	dev-lang/vala
