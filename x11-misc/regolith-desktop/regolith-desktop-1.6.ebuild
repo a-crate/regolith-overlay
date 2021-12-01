@@ -9,7 +9,6 @@ REQUIRED_USE="^^ (picom compton xcompmgr no-compositor)"
 RDEPEND="
 	x11-wm/i3-gaps
 	x11-misc/regolith-i3-gaps-config
-	x11-misc/regolith-look
 	picom? ( x11-misc/regolith-compositor-picom-glx )
 	compton? ( x11-misc/regolith-compositor-compton-glx )
 	xcompmgr? ( x11-misc/regolith-compositor-xcompmgr )
@@ -22,5 +21,6 @@ RDEPEND="
 	x11-misc/regolith-rofication
 	x11-misc/regolith-rofi-config
 	x11-misc/remontoire
+	x11-misc/regolith-styles
 	lightdm? ( x11-misc/regolith-lightdm-config )
 "
