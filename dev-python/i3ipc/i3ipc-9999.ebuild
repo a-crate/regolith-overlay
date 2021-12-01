@@ -20,4 +20,8 @@ else
 fi
 RDEPEND="${DEPEND}
 	$(python_gen_cond_dep 'dev-python/python-xlib[${PYTHON_USEDEP}]')
+	|| (
+		x11-wm/i3
+		x11-wm/i3-gaps
+	)
 "
