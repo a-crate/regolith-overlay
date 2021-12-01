@@ -27,6 +27,10 @@ fi
 RDEPEND="${DEPEND}
 	x11-apps/xrdb
 	$(python_gen_cond_dep 'dev-python/i3ipc[${PYTHON_USEDEP}]')
+	|| (
+		x11-wm/i3
+		x11-wm/i3-gaps
+	)
 "
 
 src_install() {
