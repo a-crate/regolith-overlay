@@ -3,12 +3,12 @@ EAPI=7
 DESCRIPTION="Virtual package for the regolith desktop environment."
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="+picom compton xcompmgr no-compositor +gaps lightdm"
+IUSE="+picom compton xcompmgr no-compositor lightdm"
 REQUIRED_USE="^^ (picom compton xcompmgr no-compositor)"
 
 RDEPEND="
-	gaps? ( x11-wm/i3-gaps x11-misc/regolith-i3-gaps-config )
-	!gaps? (x11-wm/i3 x11-misc/regolith-i3-config )
+	x11-wm/i3-gaps
+	x11-misc/regolith-i3-gaps-config
 	x11-misc/regolith-look
 	picom? ( x11-misc/regolith-compositor-picom-glx )
 	compton? ( x11-misc/regolith-compositor-compton-glx )
