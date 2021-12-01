@@ -7,7 +7,7 @@ inherit cmake
 DESCRIPTION="Record and restore window and workspace containment structure in i3-wm."
 HOMEPAGE="https://github.com/regolith-linux/i3-snapshot"
 SLOT="0"
-LICENSE="GPL-3"
+LICENSE="BSD"
 
 if [[ ${PV} == *9999 ]]; then
 	inherit git-r3
