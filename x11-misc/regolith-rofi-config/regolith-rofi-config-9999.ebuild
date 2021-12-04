@@ -21,7 +21,7 @@ else
 fi
 
 RDEPEND="
-	x11-misc/rofi
+	<x11-misc/rofi-1.7.0
 "
 
 src_install() {
