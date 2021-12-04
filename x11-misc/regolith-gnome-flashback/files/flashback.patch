@@ -1,0 +1,15 @@
+--- a/usr/bin/regolith-session
++++ b/usr/bin/regolith-session
+@@ -4,12 +4,4 @@ if [ -z $XDG_CURRENT_DESKTOP ]; then
+     export XDG_CURRENT_DESKTOP="Regolith:GNOME-Flashback:GNOME"
+ fi
+
+-# gnome-session broke compatability between 19.04 (3.32.0) and 19.10 (3.34.1) versions of Ubuntu (gnome-session-bin).
+-GNOME_SESSION_BIN_VERSION=$(dpkg -s gnome-session-bin | grep '^Version:' | cut -d' ' -f 2 | cut -d'-' -f 1)
+-COMPACT_VERSION="${GNOME_SESSION_BIN_VERSION//.}"
+-
+-if [ $COMPACT_VERSION -gt 3320 ]; then
+     exec gnome-session --builtin --session=regolith --disable-acceleration-check "$@"
+-else
+-    exec gnome-session --session=regolith --disable-acceleration-check "$@"
+-fi
