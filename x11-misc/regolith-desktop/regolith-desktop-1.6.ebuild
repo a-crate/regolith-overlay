@@ -1,3 +1,6 @@
+# Copyright 2021 Amelia Crate <acrate@waldn.net>
+# Distributed under the terms of the BSD License
+
 EAPI=7
 
 DESCRIPTION="Virtual package for the regolith desktop environment."
