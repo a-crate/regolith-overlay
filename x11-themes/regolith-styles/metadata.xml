@@ -6,6 +6,6 @@
 		<name>Amelia Crate</name>
 	</maintainer>
 	<upstream>
-		<remote-id type="github">regolith-linux/regolith-look</remote-id>
+		<remote-id type="github">regolith-linux/regolith-styles</remote-id>
 	</upstream>
 </pkgmetadata>

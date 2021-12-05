@@ -30,19 +30,19 @@ RDEPEND="
 	|| ( x11-wm/i3 x11-wm/i3-gaps )
 
 	ayu? (
-		x11-themes/ayu-gtk-theme
+		x11-themes/ayu-gtk-theme[ayu]
 		media-fonts/fontawesome
 		media-fonts/source-code-pro
 		x11-themes/arc-icon-theme
 	)
 	ayu-dark? (
-		x11-themes/ayu-dark-gtk-theme
+		x11-themes/ayu-gtk-theme[ayu-dark]
 		media-fonts/fontawesome
 		media-fonts/source-code-pro
 		x11-themes/arc-icon-theme
 	)
 	ayu-mirage? (
-		x11-themes/ayu-mirage-dark-gtk-theme
+		x11-themes/ayu-gtk-theme[ayu-mirage-dark]
 		media-fonts/fontawesome
 		media-fonts/source-code-pro
 		x11-themes/arc-icon-theme
@@ -66,7 +66,7 @@ RDEPEND="
 		media-fonts/jetbrains-mono
 	)
 	lascaille? (
-		x11-themes/ayu-mirage-dark-gtk-theme
+		x11-themes/ayu-gtk-theme[ayu-mirage-dark]
 		x11-themes/moka-icon-theme
 		media-fonts/material-design-icons
 		media-fonts/jetbrains-mono
@@ -95,7 +95,7 @@ RDEPEND="
 		media-fonts/source-code-pro
 	)
 	solarized-dark? (
-		x11-themes/solarc-dark-gtk-theme
+		x11-themes/solarc-gtk-theme
 		x11-themes/arc-icon-theme
 		media-fonts/font-awesome
 		media-fonts/source-code-pro
