@@ -5,7 +5,7 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_{9..10} )
 
-inherit python-single-r1
+inherit python-r1
 
 DESCRIPTION="Navigate to the next unused workspace in i3"
 HOMEPAGE="https://github.com/regolith-linux/i3-next-workspace"
