@@ -75,7 +75,7 @@ RDEPEND="
 		dev-lang/perl
 	)
 	temp? (
-		sys-apps/lmsensors
+		sys-apps/lm-sensors
 	)
 	volume? (
 		media-sound/alsa-utils
