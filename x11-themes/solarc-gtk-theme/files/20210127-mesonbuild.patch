@@ -1,0 +1,17 @@
+--- a/arc-theme-20210127/meson.build
++++ b/arc-theme-20210127/meson.build
+@@ -6,10 +6,10 @@ project(
+ )
+
+ variant_name = {
+-  'light' : (get_option('transparency') ? 'Arc' : 'Arc-solid'),
+-  'darker' : (get_option('transparency') ? 'Arc-Darker' : 'Arc-Darker-solid'),
+-  'dark' : (get_option('transparency') ? 'Arc-Dark' : 'Arc-Dark-solid'),
+-  'lighter' : (get_option('transparency') ? 'Arc-Lighter' : 'Arc-Lighter-solid'),
++  'light' : (get_option('transparency') ? 'SolArc' : 'SolArc-solid'),
++  'darker' : (get_option('transparency') ? 'SolArc-Darker' : 'SolArc-Darker-solid'),
++  'dark' : (get_option('transparency') ? 'SolArc-Dark' : 'SolArc-Dark-solid'),
++  'lighter' : (get_option('transparency') ? 'SolArc-Lighter' : 'SolArc-Lighter-solid'),
+ }
+
+ prefix = get_option('prefix')

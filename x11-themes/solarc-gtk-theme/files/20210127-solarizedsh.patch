@@ -1,0 +1,14 @@
+--- a/solarize.sh
++++ b/solarize.sh
+@@ -196,12 +196,6 @@ REPLACE[$A_PLANK_FILL_END]="7;;54;;66;;255"
+ REPLACE[$A_PLANK_OUTER_STROKE]="5;;18;;29;;255"
+ REPLACE[$A_PLANK_INNER_STROKE]="0;;43;;54;;0"
+
+-# Pull the Arc source
+-echo "### Downloading Arc source"
+-wget --quiet "https://github.com/jnsh/arc-theme/releases/download/${ARCVERSION}/arc-theme-${ARCVERSION}.tar.xz"
+-tar -xJf "arc-theme-${ARCVERSION}.tar.xz"
+-rm "arc-theme-${ARCVERSION}.tar.xz"
+-
+ CWD="`pwd`/arc-theme-${ARCVERSION}"
+ cd "${CWD}"
