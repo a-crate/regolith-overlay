@@ -11,6 +11,7 @@ __COMMIT="34c449d8f1977089f52ae7019f1101f06afa8d77"
 SRC_URI="https://github.com/schemar/solarc-theme/archive/${__COMMIT}.zip -> ${P}.zip https://github.com/jnsh/arc-theme/releases/download/${PV}/arc-theme-${PV}.tar.xz"
 LICENSE="GPL-3"
 SLOT="0"
+KEYWORDS="~amd64"
 # upstream won't release new versions with new versions of arc
 # so I'm just going to version based on the arc version
 # and use specific commits
