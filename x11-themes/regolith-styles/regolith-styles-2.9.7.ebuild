@@ -48,7 +48,7 @@ RDEPEND="
 		x11-themes/arc-icon-theme
 	)
 	cahuella? (
-		x11-themes/caheulla-gtk-theme
+		x11-themes/cahuella-gtk-theme
 		media-fonts/material-design-icons
 		media-fonts/source-code-pro
 		x11-themes/arc-icon-theme
@@ -79,30 +79,30 @@ RDEPEND="
 	nord? (
 		x11-themes/nordic-gtk-theme
 		x11-themes/arc-icon-theme
-		media-fonts/font-awesome
+		media-fonts/fontawesome
 		media-fonts/source-code-pro
 	)
 	pop-os? (
 		x11-themes/pop-gtk-theme
 		x11-themes/pop-icon-theme
-		media-fonts/font-awesome
+		media-fonts/fontawesome
 		media-fonts/pop-fonts
 	)
 	solarized-light? (
 		x11-themes/solarc-gtk-theme
 		x11-themes/arc-icon-theme
-		media-fonts/font-awesome
+		media-fonts/fontawesome
 		media-fonts/source-code-pro
 	)
 	solarized-dark? (
 		x11-themes/solarc-gtk-theme
 		x11-themes/arc-icon-theme
-		media-fonts/font-awesome
+		media-fonts/fontawesome
 		media-fonts/source-code-pro
 	)
 	ubuntu? (
 		x11-themes/adwaita-icon-theme
-		media-fonts/font-awesome
+		media-fonts/fontawesome
 		media-fonts/ubuntu-font-family
 		x11-themes/ubuntu-wallpapers
 	)
@@ -126,7 +126,7 @@ src_install() {
 		doins ayu-mirage/color ayu-mirage/typeface ayu-mirage/theme ayu-mirage/root ayu-mirage/rofi.rasi
 	fi
 	if use cahuella; then
-    		insinto /etc/regolith/styles/caheulla
+    		insinto /etc/regolith/styles/cahuella
     		doins cahuella/color cahuella/typeface cahuella/theme cahuella/root cahuella/rofi.rasi
     		insinto /usr/share/backgrounds
 		doins cahuella/regolith-structure-7.png cahuella/nord-dark.png
