@@ -24,6 +24,7 @@ RDEPEND="
 	x11-wm/i3-gaps
 	x11-misc/xdg-utils
 	x11-misc/xdotool
+	x11-terms/x-terminal-emulator
 "
 
 src_install() {
