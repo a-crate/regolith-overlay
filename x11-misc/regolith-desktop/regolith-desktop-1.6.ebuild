@@ -19,6 +19,7 @@ RDEPEND="
 	x11-misc/i3xrocks
 	x11-misc/regolith-i3xrocks-config
 	x11-misc/regolith-gnome-flashback
+	x11-misc/regolith-default-settings
 	x11-misc/xrescat
 	x11-misc/i3-snapshot
 	x11-misc/regolith-rofication
