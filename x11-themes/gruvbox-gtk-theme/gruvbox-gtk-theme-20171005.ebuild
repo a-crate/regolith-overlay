@@ -23,6 +23,13 @@ BDEPEND="
 	app-arch/unzip
 	sys-apps/sed
 "
+src_prepare() {
+	sed -e "/^Name\s*=oomox-gruvbox/s|^.*$|Name=Gruvbox|" \
+	    -e "/^GtkTheme\s*=oomox-gruvbox/s|^.*$|GtkTheme=Gruvbox|" \
+	    -e "/^MetacityTheme\s*=oomox-gruvbox/s|^.*$|MetacityTheme=Gruvbox|" \
+			-i "${S}"/index.theme || die
+	default
+}
 
 src_compile() {
 	emake -j1
@@ -31,6 +38,6 @@ src_compile() {
 src_install() {
 	mv ${S}/gtk-3.20/dist/* ${S}/gtk-3.20
 	mv ${S}/gtk-3.0/dist/* ${S}/gtk-3.0
-	insinto /usr/share/themes/gruvbox
+	insinto /usr/share/themes/Gruvbox
 	doins -r *
 }
