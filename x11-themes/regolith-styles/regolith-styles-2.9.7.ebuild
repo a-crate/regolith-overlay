@@ -143,7 +143,7 @@ src_install() {
 	fi
 	if use lascaille; then
     		insinto /etc/regolith/styles/lascaille
-    		doins lascaille/color lascaille/typeface lascaille/theme lascaille/root lascaille/rofi.rasi lascaille/i3-wm
+    		doins lascaille/color lascaille/typeface lascaille/theme lascaille/root lascaille/rofi.rasi lascaille/i3-wm lascaille/st-term
     		insinto /usr/share/backgrounds
     		doins lascaille/joel-filipe-unsplash.jpg lascaille/ESP_016895_1525_desktop.jpg
     		insinto /usr/share/gnome-background-properties

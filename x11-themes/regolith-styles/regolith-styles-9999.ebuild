@@ -89,13 +89,13 @@ RDEPEND="
 		media-fonts/pop-fonts
 	)
 	solarized-light? (
-		x11-themes/solarc-gtk-theme[light]
+		x11-themes/solarc-gtk-theme
 		x11-themes/arc-icon-theme
 		media-fonts/fontawesome
 		media-fonts/source-code-pro
 	)
 	solarized-dark? (
-		x11-themes/solarc-gtk-theme[dark]
+		x11-themes/solarc-gtk-theme
 		x11-themes/arc-icon-theme
 		media-fonts/fontawesome
 		media-fonts/source-code-pro
@@ -143,7 +143,7 @@ src_install() {
 	fi
 	if use lascaille; then
     		insinto /etc/regolith/styles/lascaille
-    		doins lascaille/color lascaille/typeface lascaille/theme lascaille/root lascaille/rofi.rasi lascaille/i3-wm
+    		doins lascaille/color lascaille/typeface lascaille/theme lascaille/root lascaille/rofi.rasi lascaille/i3-wm lascaille/st-term
     		insinto /usr/share/backgrounds
     		doins lascaille/joel-filipe-unsplash.jpg lascaille/ESP_016895_1525_desktop.jpg
     		insinto /usr/share/gnome-background-properties
