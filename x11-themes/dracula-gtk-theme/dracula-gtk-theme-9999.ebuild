@@ -17,8 +17,20 @@ else
 	S="${WORKDIR}/gtk-2.0"
 fi
 
+RDEPEND="
+	x11-themes/ozon-icon-theme
+"
+
+src_prepare() {
+	default
+	sed -e "/^Name\s*=Ant-Dracula/s|^.*$|Name=Dracula|" \
+	    -e "/^GtkTheme\s*=Ant-Dracula/s|^.*$|GtkTheme=Dracula|" \
+	    -e "/^MetacityTheme\s*=Ant-Dracula/s|^.*$|MetacityTheme=Dracula|" \
+			-i "${S}"/index.theme || die
+}
+
 src_install() {
 	default
-	insinto /usr/share/themes/Ant-Dracula
+	insinto /usr/share/themes/Dracula
 	doins -r *
 }
