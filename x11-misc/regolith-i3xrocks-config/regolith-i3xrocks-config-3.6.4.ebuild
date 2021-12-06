@@ -107,66 +107,66 @@ RDEPEND="
 "
 
 src_install() {
-	insinto /usr/share/i3xrocks
+	exeinto /usr/share/i3xrocks
 	if use time; then
-		doins scripts/time
+		doexe scripts/time
 	fi
 	if use disk-capacity; then
-		doins scripts/disk-capacity
+		doexe scripts/disk-capacity
 	fi
 	if use net-traffic; then
-		doins scripts/net-traffic
+		doexe scripts/net-traffic
 	fi
 	if use memory; then
-		doins scripts/memory
+		doexe scripts/memory
 	fi
 	if use cpu-usage; then
-		doins scripts/cpu-usage
+		doexe scripts/cpu-usage
 	fi
 	if use focused-window-name; then
-		doins scripts/focused-window-name
+		doexe scripts/focused-window-name
 	fi
 	if use battery; then
-		doins scripts/battery
+		doexe scripts/battery
 	fi
 	if use keyboard-layout; then
-		doins scripts/keyboard-layout
+		doexe scripts/keyboard-layout
 	fi
 	if use key-indicator; then
-		doins scripts/key-indicator
+		doexe scripts/key-indicator
 	fi
 	if use media-player; then
-		doins scripts/media-player
+		doexe scripts/media-player
 	fi
 	if use networkmanager; then
-		doins scripts/nm-vpn
+		doexe scripts/nm-vpn
 	fi
 	if use openvpn; then
-		doins scripts/openvpn
+		doexe scripts/openvpn
 	fi
 	if use temp; then
-		doins scripts/temp
+		doexe scripts/temp
 	fi
 	if use volume; then
-		doins scripts/volume
+		doexe scripts/volume
 	fi
 	if use microphone; then
-		doins scripts/microphone
+		doexe scripts/microphone
 	fi
 	if use weather; then
-		doins scripts/weather
+		doexe scripts/weather
 	fi
 	if use wifi; then
-		doins scripts/wifi
+		doexe scripts/wifi
 	fi
 	if use bluetooth; then
-		doins scripts/bluetooth
+		doexe scripts/bluetooth
 	fi
 	if use next-workspace; then
-		doins scripts/next-workspace-widget
+		doexe scripts/next-workspace-widget
 	fi
 	if use app-launcher; then
-		doins scripts/app-launcher
+		doexe scripts/app-launcher
 	fi
 
 	insinto /etc/regolith/i3xrocks/conf.d
