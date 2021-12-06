@@ -26,7 +26,10 @@ RDEPEND="
 	x11-misc/regolith-i3-gaps-config
 	x11-themes/regolith-styles
 	x11-apps/xrdb
-	sys-apps/dbus[user-session]
+	|| (
+		<=sys-apps/dbus-1.12.20-r3[user-session]
+		>=sys-apps/dbus-1.12.20-r4[systemd]
+	)
 "
 PATCHES=("${FILESDIR}/flashback.patch")
 
